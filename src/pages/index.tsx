@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 
 //Component
 import { PhoneInput } from "react-simple-phone-input";
+import "react-simple-phone-input/dist/cjs/index.css";
 
 
 const Home: NextPage = () => {

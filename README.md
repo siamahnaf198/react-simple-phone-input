@@ -18,8 +18,7 @@ $ npm i react-simple-phone-input --save
 
 ```jsx
 import { PhoneInput } from "react-simple-phone-input";
-//or
-//const { PhoneInput } = require("react-simple-phone-input")
+import "react-simple-phone-input/dist/cjs/index.css";
 
 <PhoneInput
     country="US"
