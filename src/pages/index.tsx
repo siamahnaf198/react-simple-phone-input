@@ -7,7 +7,7 @@ import { PhoneInput } from "react-simple-phone-input";
 
 const Home: NextPage = () => {
   return (
-    <Box sx={{ my: "3em" }}>
+    <Box sx={{ my: "3em", width: "400px", mx: "auto" }}>
       <PhoneInput
         country="US"
         placeholder="Add your phone"
