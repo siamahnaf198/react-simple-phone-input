@@ -1,7 +1,6 @@
 {
-  "name": "package-test",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-simple-phone-input",
+  "version": "1.0.0-beta",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
