@@ -7,8 +7,6 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from 'Theme';
 import createEmotionCache from 'Emotion';
 
-import "Styles/PhoneInput.css";
-
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
