@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
 import type { NextPage } from "next";
-import { Icon } from "@iconify/react";
 
-// //i
-import PhoneInput from "Components/PhoneInput";
+//Component
+import { PhoneInput } from "react-simple-phone-input";
 
 
 const Home: NextPage = () => {

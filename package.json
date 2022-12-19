@@ -1,6 +1,6 @@
 {
   "name": "react-simple-phone-input",
-  "version": "1.0.0-beta",
+  "version": "3.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,7 +22,7 @@
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-simple-phone-input": "^1.0.11-beta",
+    "react-simple-phone-input": "^3.0.1",
     "typescript": "4.9.4"
   }
 }
