@@ -1,24 +1,44 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Link from "next/link";
+
+//
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 const styles = {
     Container: {
-        mb: "4em",
-        h4: {
-            fontWeight: 600,
-            color: "#ff650d"
-        }
+        mb: "4em"
+    },
+    Name: {
+        fontWeight: 600,
+        color: "#ff650d"
+    },
+    Version: {
+        fontSize: "12px",
+        ml: "15px"
     }
 }
 
 const Header = () => {
     return (
         <Box sx={styles.Container}>
-            <Typography variant="h4" component="h4">
-                React Simple Phone Input
+            <Stack direction="row">
+                <Typography variant="h4" component="h4" sx={styles.Name}>
+                    React Simple Phone Input
+                </Typography>
+                <Box sx={styles.Version}>
+                    <SyntaxHighlighter language="javascript" style={docco}>
+                        {"v4.6.7"}
+                    </SyntaxHighlighter>
+                </Box>
+            </Stack>
+            <Typography variant="body1" component="p" sx={{
+                fontSize: "16px", mb: "12px"
+            }}>
+                A simple react phone input component with calling code dropdown🤷
             </Typography>
             <Typography variant="body1" component="p" sx={{
-                fontSize: "16px", a: {
+                fontSize: "14px", a: {
                     textDecoration: "none", color: "#ff650d"
                 }
             }}>

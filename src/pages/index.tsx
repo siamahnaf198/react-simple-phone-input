@@ -1,4 +1,4 @@
-import { Container, Box, Grid, Typography, NoSsr } from "@mui/material";
+import { Container, Box, Grid, Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Icon } from "@iconify/react";
@@ -101,7 +101,7 @@ const Home: NextPage = () => {
       </Head>
       <GithubCorner href="https://github.com/siamahnaf198/react-simple-phone-input" bannerColor="#ff650d" />
       <Grid container spacing={5}>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Basic Example
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Country Code in Input Field
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Custom Dropdown Icon
@@ -149,7 +149,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Only Include some country
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Exclude Some Country from the list
@@ -183,7 +183,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Preferred country to show on top
@@ -193,14 +193,15 @@ const Home: NextPage = () => {
               placeholder="Add your phone"
               onChange={(data) => console.log(data)}
               dialCodeInputField
-              preferredCountries={["BD", "AF", "AL"]}
+              onlyCountries={["BD", "AF", "US"]}
+              preferredCountries={["BD", "AF"]}
             />
             <SyntaxHighlighter language="javascript" style={dracula}>
               {PreferredCountry}
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Show or Hide Search
@@ -217,7 +218,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Change your search icon
@@ -234,7 +235,7 @@ const Home: NextPage = () => {
             </SyntaxHighlighter>
           </Box>
         </Grid>
-        <Grid item {...{ md: 4 }}>
+        <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
               Custom search input placeholder
