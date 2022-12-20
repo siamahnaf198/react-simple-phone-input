@@ -1,6 +1,6 @@
 {
   "name": "react-simple-phone-input",
-  "version": "3.0.5",
+  "version": "3.1.8",
   "description": "A simple react phone input component with calling code dropdown🤷",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

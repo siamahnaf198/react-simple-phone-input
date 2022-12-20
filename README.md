@@ -8,6 +8,11 @@ A simple and customizable react phone number dropdown component. It can mixed up
 [![PRs Welcome](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/prs-welcome.svg)](https://github.com/siamahnaf198/react-simple-phone-input)
 [![MIT licensed](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/license.svg)](https://github.com/siamahnaf198/react-simple-phone-input/blob/main/LICENSE)
 
+- SSR Fiendly
+- Customizable
+- Multi Design
+- Search country
+
 ## Installation
 
 ```shell-script
@@ -18,7 +23,7 @@ $ npm i react-simple-phone-input --save
 
 ```jsx
 import { PhoneInput } from "react-simple-phone-input";
-import "react-simple-phone-input/dist/cjs/index.css";
+import "react-simple-phone-input/dist/style.css";
 
 <PhoneInput
     country="US"
