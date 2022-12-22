@@ -1,17 +1,18 @@
 React Simple Phone Input
 ==========
 
-A simple and customizable react phone number dropdown component. It can mixed up with your designed theme and give a fluent vibeable dropdown area in your next project.
+A simple and customizable react phone number dropdown component. It can mix up with your designed theme and give a fluent vibe able dropdown area in your next project.
 
 [![npm version](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/npm-version.svg)](https://www.npmjs.com/package/react-simple-phone-input)
 [![npm downloads](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/downloads.svg)](https://www.npmjs.com/package/react-simple-phone-input)
 [![PRs Welcome](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/prs-welcome.svg)](https://github.com/siamahnaf198/react-simple-phone-input)
 [![MIT licensed](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/license.svg)](https://github.com/siamahnaf198/react-simple-phone-input/blob/main/LICENSE)
 
-- SSR Fiendly
+- SSR Friendly
 - Customizable
 - Multi Design
-- Search country
+- Search Country
+- Smallest Bundle Size
 
 ## Installation
 
@@ -22,13 +23,13 @@ $ npm i react-simple-phone-input --save
 ## Installation
 
 ```jsx
-import { PhoneInput } from "react-simple-phone-input";
+import { PhoneInput, PhoneInputResponseType } from "react-simple-phone-input";
 import "react-simple-phone-input/dist/style.css";
 
 <PhoneInput
     country="US"
     placeholder="Add your phone"
-    onChange={(data) => console.log(data)}
+    onChange={(data: PhoneInputResponseType) => console.log(data)}
 />
 ```
 #### [See Demo](https://react-simple-phone-input.vercel.app/)
@@ -69,7 +70,7 @@ import "react-simple-phone-input/dist/style.css";
     <td> ReactNode </td>
     <td> Dropdown Icon component for changing default icon </td>
     <td> optional </td>
-    <td><code> &lt;Icon icon=&quot;icon-name&quot; /&gt; </cpde></td>
+    <td><code> &lt;Icon icon=&quot;icon-name&quot; /&gt; </code></td>
   </tr>
   
    <tr>
@@ -117,7 +118,7 @@ import "react-simple-phone-input/dist/style.css";
     <td> ReactNode </td>
     <td> If <code>search</code> enabled, custom search icon to show on search bar </td>
     <td> optional </td>
-    <td><code> &lt;Icon icon=&quot;icon-name&quot; /&gt; </cpde></td>
+    <td><code> &lt;Icon icon=&quot;icon-name&quot; /&gt; </code></td>
   </tr>
   
   <tr>
@@ -165,6 +166,16 @@ import "react-simple-phone-input/dist/style.css";
     <td> true </td>
     <td> Show or Hide search icon </td>
   </tr>
+  <tr>
+    <td> disableDropdownOnly </td>
+    <td> false </td>
+    <td> Disable dropdown menu list </td>
+  </tr>
+  <tr>
+    <td> disableInput </td>
+    <td> false </td>
+    <td> Disable input field </td>
+  </tr>
 </table>
 
 ## Event
@@ -177,10 +188,119 @@ import "react-simple-phone-input/dist/style.css";
   </tr>
   <tr>
     <td> onChange </td>
-    <td> To get the value from component </td>
-    <td> <code>onChange={(data: string) => console.log(data)}</code> </td>
+    <td> To get the value from component. You get following field
+        <ul>
+            <li><code>country</code></li>
+            <li><code>code</code></li>
+            <li><code>dialCode</code></li>
+            <li><code>value</code></li>
+            <li><code>valueWithoutPlus</code></li>
+         </ul>
+    </td>
+    <td> <code>onChange={(data: PhoneInputResponseType) => console.log(data)}</code> </td>
   </tr>
 </table>
+
+## ClassName
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Type </th>
+    <th> Description </th>
+  </tr>
+  <tr>
+    <td> containerClass </td>
+    <td> string </td>
+    <td> class name for container </td>
+  </tr>
+  <tr>
+    <td> buttonClass </td>
+    <td> string </td>
+    <td> class name for dropdown button </td>
+  </tr>
+  <tr>
+    <td> dropdownClass </td>
+    <td> string </td>
+    <td> class name for dropdown area/menu </td>
+  </tr>
+  <tr>
+    <td> dropdownListClass </td>
+    <td> string </td>
+    <td> class name for dropdown list </td>
+  </tr>
+  <tr>
+    <td> dropdownIconClass </td>
+    <td> string </td>
+    <td> class name for dropdown icon </td>
+  </tr><tr>
+    <td> searchContainerClass </td>
+    <td> string </td>
+    <td> class name for search bar container </td>
+  </tr>
+  <tr>
+    <td> searchInputClass </td>
+    <td> string </td>
+    <td> class name for search input field </td>
+  </tr>
+  <tr>
+    <td> searchIconClass </td>
+    <td> string </td>
+    <td> class name for search icon </td>
+  </tr>
+  <tr>
+    <td> inputClass </td>
+    <td> string </td>
+    <td> class name for search icon </td>
+  </tr>
+</table>
+
+## Customize styles
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Description </th>
+  </tr>
+  <tr>
+    <td> containerStyle </td>
+    <td> phone Input Container style </td>
+  </tr>
+  <tr>
+    <td> buttonStyle </td>
+    <td> style for dropdown button </td>
+  </tr>
+  <tr>
+    <td> dropdownStyle </td>
+    <td> style for dropdown menu/area </td>
+  </tr>
+  <tr>
+    <td> dropdownListStyle </td>
+    <td> style for dropdown list </td>
+  </tr>
+  <tr>
+    <td> dropdownIconStyle </td>
+    <td> style for dropdown icon </td>
+  </tr>
+  <tr>
+    <td> searchContainerStyle </td>
+    <td> search container style </td>
+  </tr>
+  <tr>
+    <td> searchInputStyle </td>
+    <td> search input field style </td>
+  </tr>
+  <tr>
+    <td> searchIconStyle </td>
+    <td> search icon style </td>
+  </tr>
+  <tr>
+    <td> inputStyle </td>
+    <td> input field style </td>
+  </tr>
+</table>
+
+`note:` version 5 released today. see the [changelogs](https://github.com/siamahnaf198/react-simple-phone-input/releases/tag/v5.0.0)
 
 ## Contributing
 - Code style changes not allowed

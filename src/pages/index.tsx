@@ -6,12 +6,12 @@ import { Icon } from "@iconify/react";
 import GithubCorner from "react-github-corner";
 
 //
-import { PhoneInput } from "react-simple-phone-input";
+import { PhoneInput, PhoneInputResponseType } from "react-simple-phone-input";
 import "react-simple-phone-input/dist/style.css";
 
 //
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 //
 import Footer from "Components/Footer";
@@ -91,8 +91,29 @@ const SearchByCountry =
   dialCodeInputField
   searchPlaceholder="Search by country"
 />`
+const DisableDropdown =
+  `
+<PhoneInput
+  country="AI"
+  placeholder="Add your phone"
+  onChange={(data) => console.log(data)}
+  disableDropdownOnly
+  searchPlaceholder="Search by country"
+/>`
+const DisableInput =
+  `<PhoneInput
+  country="AI"
+  placeholder="Add your phone"
+  onChange={(data) => console.log(data)}
+  disableInput
+  disableDropdownOnly
+  searchPlaceholder="Search by country"
+/>`
 
 const Home: NextPage = () => {
+  const onChangeHandler = (data: PhoneInputResponseType) => {
+    console.log(data)
+  }
   return (
     <Container disableGutters sx={{ py: "20px" }}>
       <Header />
@@ -100,7 +121,7 @@ const Home: NextPage = () => {
         <title>React Simple Phone Input</title>
       </Head>
       <GithubCorner href="https://github.com/siamahnaf198/react-simple-phone-input" bannerColor="#ff650d" />
-      <Grid container spacing={5}>
+      <Grid container spacing={3}>
         <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>
             <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
@@ -109,9 +130,9 @@ const Home: NextPage = () => {
             <PhoneInput
               country="AI"
               placeholder="Add your phone"
-              onChange={(data) => console.log(data)}
+              onChange={(data) => onChangeHandler(data)}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {BasicExample}
             </SyntaxHighlighter>
           </Box>
@@ -127,7 +148,7 @@ const Home: NextPage = () => {
               onChange={(data) => console.log(data)}
               dialCodeInputField
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {DialCodeInput}
             </SyntaxHighlighter>
           </Box>
@@ -144,7 +165,7 @@ const Home: NextPage = () => {
               dialCodeInputField
               iconComponent={<Icon icon="bx:chevron-down" />}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {IconComponent}
             </SyntaxHighlighter>
           </Box>
@@ -161,7 +182,7 @@ const Home: NextPage = () => {
               dialCodeInputField
               onlyCountries={["BD", "AF", "US"]}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {onlyCountry}
             </SyntaxHighlighter>
           </Box>
@@ -178,7 +199,7 @@ const Home: NextPage = () => {
               dialCodeInputField
               excludeCountries={["BD", "AF", "AL"]}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {excludeCountry}
             </SyntaxHighlighter>
           </Box>
@@ -196,7 +217,7 @@ const Home: NextPage = () => {
               onlyCountries={["BD", "AF", "US"]}
               preferredCountries={["BD", "AF"]}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {PreferredCountry}
             </SyntaxHighlighter>
           </Box>
@@ -213,7 +234,7 @@ const Home: NextPage = () => {
               dialCodeInputField
               search={false}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {SearchShow}
             </SyntaxHighlighter>
           </Box>
@@ -230,7 +251,7 @@ const Home: NextPage = () => {
               dialCodeInputField
               searchIconComponent={<Icon icon="ic:baseline-search" />}
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {SearchIcon}
             </SyntaxHighlighter>
           </Box>
@@ -247,8 +268,43 @@ const Home: NextPage = () => {
               dialCodeInputField
               searchPlaceholder="Search by country"
             />
-            <SyntaxHighlighter language="javascript" style={dracula}>
+            <SyntaxHighlighter language="javascript" style={docco}>
               {SearchByCountry}
+            </SyntaxHighlighter>
+          </Box>
+        </Grid>
+        <Grid item {...{ sm: 4, xs: 12 }}>
+          <Box>
+            <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
+              Disable Dropdown Menu/area
+            </Typography>
+            <PhoneInput
+              country="AI"
+              placeholder="Add your phone"
+              onChange={(data) => console.log(data)}
+              disableDropdownOnly
+              searchPlaceholder="Search by country"
+            />
+            <SyntaxHighlighter language="javascript" style={docco}>
+              {DisableDropdown}
+            </SyntaxHighlighter>
+          </Box>
+        </Grid>
+        <Grid item {...{ sm: 4, xs: 12 }}>
+          <Box>
+            <Typography variant="body1" component="p" sx={{ mb: "10px" }}>
+              Disable all (dropdown and input field)
+            </Typography>
+            <PhoneInput
+              country="AI"
+              placeholder="Add your phone"
+              onChange={(data) => console.log(data)}
+              disableInput
+              disableDropdownOnly
+              searchPlaceholder="Search by country"
+            />
+            <SyntaxHighlighter language="javascript" style={docco}>
+              {DisableInput}
             </SyntaxHighlighter>
           </Box>
         </Grid>
