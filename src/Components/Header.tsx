@@ -28,7 +28,7 @@ const Header = () => {
                 </Typography>
                 <Box sx={styles.Version}>
                     <SyntaxHighlighter language="javascript" style={docco}>
-                        {"v4.6.7"}
+                        {"v5.0.0"}
                     </SyntaxHighlighter>
                 </Box>
             </Stack>
