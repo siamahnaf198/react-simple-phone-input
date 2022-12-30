@@ -1,1 +1,1 @@
-export { default } from "./PhoneInput";
+export { default, PhoneInputResponseType } from "./PhoneInput";

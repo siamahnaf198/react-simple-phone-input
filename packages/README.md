@@ -12,7 +12,8 @@ A simple and customizable react phone number dropdown component. It can mix up w
 - Customizable
 - Multi Design
 - Search Country
-- Smallest Bundle Size
+- Smallest Bundle Size (About 98kb)
+- Typescript support
 
 ## Installation
 
@@ -20,7 +21,7 @@ A simple and customizable react phone number dropdown component. It can mix up w
 $ npm i react-simple-phone-input --save
 ```
 
-## Installation
+## Usage
 
 ```jsx
 import { PhoneInput, PhoneInputResponseType } from "react-simple-phone-input";
@@ -300,7 +301,7 @@ import "react-simple-phone-input/dist/style.css";
   </tr>
 </table>
 
-`note:` version 5 released today. see the [changelogs](https://github.com/siamahnaf198/react-simple-phone-input/releases/tag/v5.0.0)
+`note:` version 5 released. see the [changelogs](https://github.com/siamahnaf198/react-simple-phone-input/releases/tag/v5.0.0)
 
 ## Contributing
 - Code style changes not allowed
