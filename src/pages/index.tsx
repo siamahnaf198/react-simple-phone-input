@@ -120,7 +120,7 @@ const Home: NextPage = () => {
       <Head>
         <title>React Simple Phone Input</title>
       </Head>
-      <GithubCorner href="https://github.com/siamahnaf198/react-simple-phone-input" bannerColor="#ff650d" />
+      <GithubCorner href="https://github.com/siamahnaf/react-simple-phone-input" bannerColor="#ff650d" />
       <Grid container spacing={3}>
         <Grid item {...{ sm: 4, xs: 12 }}>
           <Box>

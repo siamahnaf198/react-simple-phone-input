@@ -47,7 +47,7 @@ const Footer = () => {
                 <Link href="https://www.siamahnaf.com/">
                     <Icon icon="mdi:web" />
                 </Link>
-                <Link href="https://github.com/siamahnaf198">
+                <Link href="https://github.com/siamahnaf">
                     <Icon icon="ant-design:github-outlined" />
                 </Link>
                 <Link href="https://twitter.com/siamahnaf198">

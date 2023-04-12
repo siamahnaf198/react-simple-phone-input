@@ -315,8 +315,8 @@ If you face any issues, missing data or wrong data about country, you are welcom
 - Author - [Siam Ahnaf](https://www.siamahnaf.com/)
 - Website - [https://www.siamahnaf.com/](https://www.siamahnaf.com/)
 - Twitter - [https://twitter.com/siamahnaf198](https://twitter.com/siamahnaf198)
-- Github - [https://github.com/siamahnaf198](https://github.com/siamahnaf198)
+- Github - [https://github.com/siamahnaf](https://github.com/siamahnaf)
 
 ## License
 
-[![MIT licensed](https://cdn.jsdelivr.net/gh/siamahnaf198/react-simple-phone-input@main/assets/license.svg)](LICENSE)
+[![MIT licensed](https://cdn.jsdelivr.net/gh/siamahnaf/react-simple-phone-input@main/assets/license.svg)](LICENSE)
