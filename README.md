@@ -322,3 +322,4 @@ If you face any issues, missing data or wrong data about country, you are welcom
 ## License
 
 [![MIT licensed](https://cdn.jsdelivr.net/gh/siamahnaf/react-simple-phone-input@main/assets/license.svg)](LICENSE)
+
